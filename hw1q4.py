@@ -19,7 +19,6 @@ for line in sequences:
 
     line = line.strip()
     linelen = len(line)
-    print(line)
 
     longest_length = linelen if (longest_length < linelen) else longest_length
 
