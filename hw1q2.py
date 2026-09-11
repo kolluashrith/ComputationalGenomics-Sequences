@@ -4,10 +4,10 @@ import sys
 input_filename = sys.argv[1]
 output_filename = sys.argv[2]
 
-#Open and read sequences
+#Open and read sequences, convert both to uppercase to avoid any issues with lowercase letters
 input_file = open(input_filename)
-sequence1 = input_file.readline().strip()
-sequence2 = input_file.readline().strip()
+sequence1 = input_file.readline().strip().upper()
+sequence2 = input_file.readline().strip().upper()
 
 #Probably redundant but just in case handling of inputs being read incorrectly
 if len(sequence1) != len(sequence2):

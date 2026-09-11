@@ -1,3 +1,5 @@
+#AI Discloser: I used AI in lines 25-26 to catch a possible bug that might result in empty lines being indexed, crashing the program. Unsure if this is an input error handling requirement but I did it anyway to be safe.
+
 import sys
 
 #Store both input and output file names (CLI)
@@ -19,6 +21,9 @@ for line in sequences:
 
     line = line.strip()
     linelen = len(line)
+
+    if linelen == 0:
+        continue #skip blank lines to avoid indexing into an empty string
 
     longest_length = linelen if (longest_length < linelen) else longest_length
 
