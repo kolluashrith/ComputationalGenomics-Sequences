@@ -9,7 +9,7 @@ import sys
 input_filename = sys.argv[1]
 output_filename = sys.argv[2]
 
-#Open and read lines
+#Open file to read
 input_file = open(input_filename)
 
 
