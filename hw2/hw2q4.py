@@ -46,7 +46,7 @@ def check_pos(pos, read, reference_seq):
                 num_matched_bases_without_mismatch += 1
 
             #Return yes if we have an single-deletion
-        if num_matched_bases_without_mismatch >= len(read) - 1:
+        if num_matched_bases_without_mismatch == len(read):
             return True
         else:
             num_matched_bases_without_mismatch = temp #reset
