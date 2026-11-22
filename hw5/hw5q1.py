@@ -1,3 +1,5 @@
+#ChatGPT was used at the very end to catch any final bugs and its only contribution was pointing out I left in some debugging print statements by accident.
+
 import sys
 from collections import defaultdict
 
