@@ -80,3 +80,7 @@ contig_list.sort()
 
 for contig in contig_list:
     output_file.write(f"{contig}\n")
+
+#Close files
+input_file.close()
+output_file.close()
