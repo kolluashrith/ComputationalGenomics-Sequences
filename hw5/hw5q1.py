@@ -48,17 +48,12 @@ for line in lines:
 #Assemble graphs into contigs
 def assemble(start, next_node, contig_list):
 
-    print(f"start kmer is {start}.")
     curr_node = next_node
     start += curr_node.data[-1]
-    print(f"The first addition is now {start} and curr is {curr_node.data} with indeg {len(curr_node.prev)} and outdeg {len(curr_node.next)}")
 
     while len(curr_node.next) == 1 and len(curr_node.prev) == 1:
         curr_node = next(iter(curr_node.next), None)
         start += curr_node.data[-1]
-        print(f"The next addition is now {start}")
-
-    print(f"The appended is {start}")
     contig_list.append(start)
     return
     
